@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionamento de Vouchers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function copiarCodigo(codigo) {
+            navigator.clipboard.writeText(codigo).then(() => {
+                alert('Código copiado: ' + codigo);
+            });
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-b from-[#82077B] to-[#4B0272] flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md p-6 bg-white rounded-2xl shadow-lg">
+        <h2 class="text-center text-xl font-bold text-gray-800 mb-4">Selecione seu Voucher</h2>
+        
+        <div class="space-y-4">
+            <div class="p-4 bg-gray-100 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-gray-700">Voucher para Planos</h3>
+                <p class="text-sm text-gray-500">Utilize este voucher para acessar planos na plataforma On Learning.</p>
+                <p class="text-sm font-bold text-gray-800">Código: PLANOS1234</p>
+                <button onclick="copiarCodigo('PLANOS1234')" class="mt-2 px-3 py-1 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600">Copiar Código</button>
+            </div>
+            
+            <div class="p-4 bg-gray-100 rounded-lg shadow-md">
+                <h3 class="text-lg font-semibold text-gray-700">Voucher para Cursos Avulsos</h3>
+                <p class="text-sm text-gray-500">Use este voucher para acessar cursos avulsos na plataforma On Learning.</p>
+                <p class="text-sm font-bold text-gray-800">Código: CURSOS5678</p>
+                <button onclick="copiarCodigo('CURSOS5678')" class="mt-2 px-3 py-1 bg-blue-500 text-white rounded-lg text-sm hover:bg-blue-600">Copiar Código</button>
+            </div>
+        </div>
+        
+        <div class="flex justify-between mt-4">
+            <button class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400">Voltar</button>
+            <button class="px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-800">Seguir para On Learning</button>
+        </div>
+    </div>
+</body>
+</html>
